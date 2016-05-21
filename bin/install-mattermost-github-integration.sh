@@ -22,7 +22,7 @@ cp /vagrant/files/mattermost-github-integration/config.py /home/mattermost-githu
 chown mattermost-github-integration:mattermost-github-integration /home/mattermost-github-integration/mattermost-github-integration/config.py
 
 # copy: upstart control
-cp /vagrant/files/upstart.conf /etc/init/mattermost-github-integration.conf
+cp /vagrant/files/mattermost-github-integration/upstart.conf /etc/init/mattermost-github-integration.conf
 
 # daemon: launch
 start mattermost-github-integration

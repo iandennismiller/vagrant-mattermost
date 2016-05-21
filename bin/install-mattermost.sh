@@ -16,7 +16,7 @@ sudo -u postgres psql -c "GRANT ALL PRIVILEGES ON DATABASE mattermost to mmuser;
 useradd --system --user-group --create-home mattermost
 
 # Download the latest Mattermost Server
-if [ ! -d /home/mattermost/mattermost ]; then
+if [ ! -d /home/mattermost/mattermost-team-${MM_VERSION}-linux-amd64.tar.gz ]; then
     wget -q https://releases.mattermost.com/${MM_VERSION}/mattermost-team-${MM_VERSION}-linux-amd64.tar.gz
     tar xvzf mattermost-team-${MM_VERSION}-linux-amd64.tar.gz
     mv mattermost /home/mattermost
@@ -25,13 +25,13 @@ fi
 
 # Configure and start Mattermost server
 chown -R mattermost:mattermost /mattermost
-cp /vagrant/files/config.json /home/mattermost/mattermost/config/config.json
-cp /vagrant/files/mattermost.conf /etc/init
+cp /vagrant/files/mattermost/config.json /home/mattermost/mattermost/config/config.json
+cp /vagrant/files/mattermost/upstart.conf /etc/init/mattermost.conf
 start mattermost
 
 # Configure nginx to proxy Mattermost
 rm /etc/nginx/sites-enabled/default
-cp /vagrant/files/nginx.conf /etc/nginx/sites-available/mattermost
+cp /vagrant/files/mattermost/nginx.conf /etc/nginx/sites-available/mattermost
 ln -s /etc/nginx/sites-available/mattermost /etc/nginx/sites-enabled/mattermost
 service nginx restart
 
