@@ -45,7 +45,7 @@ Alter the following files within the repository:
 
 ## Reference Implementation
 
-This Vagrant environment is based on the Ubuntu 14.04 LTS installation procedure described in the official [Mattermost documentation](http://docs.mattermost.com/install/prod-ubuntu.html).  For posterity, the [documentation source](http://docs.mattermost.com/_sources/install/prod-ubuntu.txt) was snapshotted on 2016-05-21 and stored within this repository as ``/docs/prod-ubuntu.rst``.
+This Vagrant environment is based on the Ubuntu 14.04 LTS installation procedure described in the official [Mattermost documentation](http://docs.mattermost.com/install/prod-ubuntu.html).  For posterity, the [documentation source](http://docs.mattermost.com/_sources/install/prod-ubuntu.txt) was snapshotted on 2016-05-21 and stored within this repository as [docs/prod-ubuntu.rst](https://github.com/iandennismiller/vagrant-mattermost/blob/master/docs/prod-ubuntu.rst).
 
 ## Github Integration
 
@@ -55,7 +55,7 @@ This Vagrant environment is based on the Ubuntu 14.04 LTS installation procedure
 
 The MIT License (MIT)
 
-vagrant-mattermost
+**vagrant-mattermost**
 
 Copyright (c) 2016 Ian Dennis Miller
 
