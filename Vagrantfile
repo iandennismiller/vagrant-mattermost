@@ -27,7 +27,7 @@ Vagrant.configure(2) do |config|
   end
 
   config.vm.provision :shell, path: "bin/bootstrap.sh"
-  config.vm.provision :shell, path: "bin/install-mattermost.sh"
-  # config.vm.provision :shell, path: "bin/install-mattermost-github-integration.sh"
+  config.vm.provision :shell, path: "files/mattermost/install.sh"
+  # config.vm.provision :shell, path: "files/mattermost-github-integration/install.sh"
 
 end

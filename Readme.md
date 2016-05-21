@@ -1,4 +1,4 @@
-# Mattermost Vagrant
+# Vagrant Mattermost
 
 This repository contains a Vagrant environment that will install and run [Mattermost](http://www.mattermost.org).  Optionally, this can also run a [Github integration](https://github.com/softdevteam/mattermost-github-integration) bot.
 

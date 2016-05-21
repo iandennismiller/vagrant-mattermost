@@ -4,7 +4,9 @@
 # (c) 2016 Ian Dennis Miller
 # http://github.com/iandennismiller/vagrant-mattermost
 
-# see http://www.mattermost.org/download/ for latest version
+# This script is derived from http://docs.mattermost.com/install/prod-ubuntu.html
+
+# See http://www.mattermost.org/download/ for latest version
 MM_VERSION=2.2.0
 
 # database: mattermost
@@ -16,11 +18,12 @@ sudo -u postgres psql -c "GRANT ALL PRIVILEGES ON DATABASE mattermost to mmuser;
 useradd --system --user-group --create-home mattermost
 
 # Download the latest Mattermost Server
-if [ ! -d /home/mattermost/mattermost-team-${MM_VERSION}-linux-amd64.tar.gz ]; then
+if [ ! -f /home/mattermost/mattermost-team-${MM_VERSION}-linux-amd64.tar.gz ]; then
+    rm -rf /home/mattermost/mattermost
     wget -q https://releases.mattermost.com/${MM_VERSION}/mattermost-team-${MM_VERSION}-linux-amd64.tar.gz
     tar xvzf mattermost-team-${MM_VERSION}-linux-amd64.tar.gz
-    mv mattermost /home/mattermost
-    chown -R mattermost:mattermost /home/mattermost/mattermost
+    chown -R mattermost:mattermost ./mattermost
+    mv ./mattermost /home/mattermost/mattermost
 fi
 
 # Configure and start Mattermost server
