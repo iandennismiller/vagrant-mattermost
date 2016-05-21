@@ -14,8 +14,8 @@ To install **vagrant-mattermost**, do the following:
 
     git clone https://github.com/iandennismiller/vagrant-mattermost.git
     cd vagrant-mattermost
-    vi files/mattermost/nginx.conf
-    vi files/mattermost-github-integration/config.py
+    vi vagrant/files/mattermost/nginx.conf
+    vi vagrant/files/mattermost-github-integration/config.py
     make requirements vagrant
 
 For information about how to edit nginx.conf and config.py, see *Customization Instructions* below.
@@ -30,14 +30,14 @@ Once the machine has booted, you must create SSL certificates using [letsencrypt
 
 Alter the following files within the repository:
 
-- `files/mattermost/nginx.conf`
-- `files/mattermost-github-integration/config.py`
+- `vagrant/files/mattermost/nginx.conf`
+- `vagrant/files/mattermost-github-integration/config.py`
 
-### files/nginx.conf
+### vagrant/files/nginx.conf
 
 - *hostname*: set this to your hostname
 
-### files/mattermost-github-integration/config.py
+### vagrant/files/mattermost-github-integration/config.py
 
 - *hostname*: set this to your hostname
 - *mattermost_default_hook_url*: provided by mattermost
