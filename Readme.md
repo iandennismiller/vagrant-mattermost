@@ -35,13 +35,13 @@ Alter the following files within the repository:
 
 ### files/nginx.conf
 
-- *{{{ hostname }}}*: set this to your hostname
+- *hostname*: set this to your hostname
 
 ### files/mattermost-github-integration/config.py
 
-- *{{{ hostname }}}*: set this to your hostname
-- *{{{ mattermost_default_hook_url }}}*: provided by mattermost
-- *{{{ mattermost_secret }}}*: provided by mattermost
+- *hostname*: set this to your hostname
+- *mattermost_default_hook_url*: provided by mattermost
+- *mattermost_secret*: provided by mattermost
 
 ## Reference Implementation
 
